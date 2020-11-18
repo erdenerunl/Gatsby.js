@@ -5,6 +5,22 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+    siteMetadata: {
+        title: `CLIMB ON!`,
+        author: `Erdener Ünal`
+    },
+    plugins: [
+        'gatsby-plugin-sass',
+        {
+            resolve:'gatsby-source-filesystem',
+            options: {
+                name: 'src',
+                path:`${__dirname}/src/`
+            }
+
+        },
+        'gatsby-transformer-remark',
+        `gatsby-plugin-fontawesome-css`
+    ],
 }
+
