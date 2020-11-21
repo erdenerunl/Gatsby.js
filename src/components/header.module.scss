@@ -1,6 +1,7 @@
 $primaryshadow: rgba(0,0,0,0.5);
 $primaryColor: black;
 $navmargin: 90px;
+$primaryheading: #ffffff;
 
 @mixin flexCenter {
     display: flex;
@@ -19,6 +20,17 @@ $navmargin: 90px;
 .navStyle {
     background-color: $primaryshadow;
     height: $navmargin;
+}
+
+.navbarNav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialBar{
+    display: flex;
+    float: right;
 }
 
 .navlinks {
@@ -45,17 +57,30 @@ $navmargin: 90px;
 .bannerDiv {
     width: 100%;
     height: 100vh;
-    background-color: $primaryshadow;
     background-image: url("../images/header/bg.jpg");
     background-position: center center;
     background-size: cover;
     z-index: -9999;
     margin-top: -$navmargin;
+    display: flex;
 }
 
 //ShowCase 
 
-.wrapper {
+.bannerCon{
+    @include flexCenter;
+    background-color: $primaryshadow;
+    margin-top: $navmargin;
+    
+}
+
+
+.bannerRow {
     @include flexCenter;
 
+}
+
+.heading1 {
+    color: $primaryheading;
+   
 }

@@ -12,8 +12,13 @@ import {
 import HeaderStyles from "../components/header.module.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
 import logo from "../images/header/logo.png"
-import Icon from "@mdi/react"
-import { mdiFacebook, mdiTwitter, mdiLinkedin } from "@mdi/js"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import {
+  faLinkedin,
+  faFacebookSquare,
+  faInstagram
+} from '@fortawesome/free-brands-svg-icons';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,13 +37,13 @@ const Header = () => {
 
   return (
     <div>
-      <Navbar className={HeaderStyles.navStyle} expand="md">
+      <Navbar className={HeaderStyles.navStyle} mr-auto expand="md" >
         <NavbarBrand href="/">
           <img src={logo} alt="Logo" className={HeaderStyles.logo}></img>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="m-auto" navbar>
+          <Nav navbar className={HeaderStyles.navbarNav}>
             <NavItem>
               <Link className={HeaderStyles.navlinks} to="/">
                 Home
@@ -53,11 +58,16 @@ const Header = () => {
                 Contact
               </Link>
             </NavItem>
-            <NavItem>
-              <Icon className="mdi md-facebook" path={mdiFacebook} />
-              <Icon className="mdi md-facebook" path={mdiTwitter} />
-              <Icon className="mdi md-facebook" path={mdiLinkedin} />
-              <Icon className="fa fa-plus-circle" />
+            <NavItem className={HeaderStyles.socialBar}>
+              <NavLink className={HeaderStyles.navlinks}>
+                <FontAwesomeIcon icon={faFacebookSquare} />
+              </NavLink>
+              <NavLink className={HeaderStyles.navlinks}>
+              <FontAwesomeIcon icon={faLinkedin} />
+              </NavLink>
+              <NavLink className={HeaderStyles.navlinks}>
+              <FontAwesomeIcon icon={faInstagram} />
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
