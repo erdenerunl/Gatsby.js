@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 import {
   Collapse,
   Navbar,
@@ -13,7 +13,6 @@ import  headerStyles from "../components/header.module.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
 import logo from "../images/header/logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
 import {
   faLinkedin,
   faFacebookSquare,
@@ -54,14 +53,14 @@ const Header = () => {
             </NavItem> 
             
              <NavItem className={headerStyles.socialBar}>
-              <NavLink className={headerStyles.navlinks}>
-                <FontAwesomeIcon icon={faFacebookSquare} />
+              <NavLink className={headerStyles.navSocial}>
+                <FontAwesomeIcon icon={faFacebookSquare} size="lg" />
               </NavLink>
-              <NavLink className={headerStyles.navlinks}>
-              <FontAwesomeIcon icon={faLinkedin} />
+              <NavLink className={headerStyles.navSocial}>
+              <FontAwesomeIcon icon={faLinkedin} size="lg" />
               </NavLink>
-              <NavLink className={headerStyles.navlinks}>
-              <FontAwesomeIcon icon={faInstagram} />
+              <NavLink className={headerStyles.navSocial}>
+              <FontAwesomeIcon icon={faInstagram} size="lg" />
               </NavLink>
             </NavItem>
             

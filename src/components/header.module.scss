@@ -36,9 +36,9 @@ $primaryheading: #ffffff;
     float: right;
 }
 
-.navlinks {
+.navlinks, .navSocial {
     display: inline-block;
-    color: $primaryColor;
+    color: #adb4b9;
     font-weight: 500;
     margin: 1rem;
     padding: 0.75rem;
@@ -54,7 +54,19 @@ $primaryheading: #ffffff;
         text-decoration: none;
         
     }
+    
 
+}
+
+.navSocial {
+    margin: 1rem 0.25rem ;
+    padding: 0.75rem 0.25rem!important;
+
+    &:hover {
+        color: #ffffff;
+        transform: scale(1.1);
+        text-decoration: none;
+    }
 }
 
 .bannerDiv {
@@ -92,7 +104,6 @@ $primaryheading: #ffffff;
     font-size: 3.5rem;
     color: $primaryheading;
     text-transform: uppercase;  
-    
 }
 .heading3 {
     font-size: 1.50rem;
@@ -109,6 +120,4 @@ $primaryheading: #ffffff;
     display: flex;
     flex-direction: column;
     margin-bottom: 20%;
-
-    
 }
